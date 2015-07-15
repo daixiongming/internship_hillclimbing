@@ -5,21 +5,21 @@
 #include <vector>
 #include <string>
 
-class State{
+class State {
 public:
-	State findNewState(std::vector<Bid> bids);
-	std::string toString();
-	bool isValidWithBid(Bid bid);
-	bool isValidWithSwap(int toRemove, Bid bid);
-	void addBid(Bid b);
-	void swapBids(int toRemove, Bid toAdd);
+  State findNewState(std::vector<Bid> bids);
+  std::string toString();
+  bool isValidWithBid(Bid bid);
+  bool isValidWithSwap(int toRemove, Bid bid);
+  void addBid(Bid b);
+  void swapBids(int toRemove, Bid toAdd);
 
-	float totalValue();
+  float totalValue();
 
-	void clear();
+  void clear();
 
 private:
-	std::vector<Bid> usedBids;
+  std::vector<Bid> usedBids;
 };
 
 #endif

@@ -1,16 +1,17 @@
 #include <iostream>
 #include <random>
+#include <ctime>
 
 #include "state.h"
 #include "bid.h"
 #include "hillclimber.h"
 
 int main() {
-	std::srand(time(0));
+  std::srand(time(0));
 
-	HillClimber hc;
+  HillClimber hc;
 
-	hc.run();
+  hc.run();
 
-	std::cout << hc.currentState.toString() << std::endl;
+  std::cout << hc.bestState.toString() << std::endl;
 }

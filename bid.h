@@ -3,11 +3,12 @@
 
 #include <vector>
 
-struct Bid{
-	int id;
-	std::vector<int> regions;
-	float payment;
-	Bid(std::vector<int> regions, float payment, int id) : regions(regions), payment(payment), id(id) {}
+struct Bid {
+  int id;
+  std::vector<int> regions;
+  float payment;
+  Bid(std::vector<int> regions, float payment, int id)
+      : regions(regions), payment(payment), id(id) {}
 };
 
 #endif
