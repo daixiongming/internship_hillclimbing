@@ -1,0 +1,8 @@
+/tmp/ccy7C8G2.o: In function `main':
+/home/theothersam/internship_hillclimbing/main.cpp:9: undefined reference to `State::addBid(Bid)'
+/home/theothersam/internship_hillclimbing/main.cpp:10: undefined reference to `State::addBid(Bid)'
+/home/theothersam/internship_hillclimbing/main.cpp:11: undefined reference to `State::addBid(Bid)'
+/home/theothersam/internship_hillclimbing/main.cpp:17: undefined reference to `State::findNewState(std::vector<Bid, std::allocator<Bid> >)'
+/home/theothersam/internship_hillclimbing/main.cpp:18: undefined reference to `State::toString()'
+collect2: error: ld returned 1 exit status
+make: *** [all] Error 1
