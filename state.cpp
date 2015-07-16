@@ -38,12 +38,18 @@ State State::findNewState(std::vector<Bid> bids) {
 
 std::string State::toString() {
   std::stringstream ss;
+  ss.precision(15);
+  ss << "The total value of the state is $" << totalValue() << '\n';
   for (Bid b : usedBids) {
-    ss << b.payment << ": ";
+    int companyid;
+    ss << '$' << b.payment << " from bid on ";
     for (int i : b.regions) {
-      ss << i << " ";
+      if (i >= 0)
+        ss << i << " ";
+      else
+        companyid = 1 - i;
     }
-    ss << std::endl;
+    ss << "by company " << companyid << std::endl;
   }
   return ss.str();
 }
@@ -78,8 +84,8 @@ void State::addBid(Bid b) { usedBids.push_back(b); }
 
 void State::swapBids(int toRemove, Bid toAdd) { usedBids[toRemove] = toAdd; }
 
-float State::totalValue() {
-  float val = 0;
+double State::totalValue() {
+  double val = 0;
   for (Bid b : usedBids) {
     val += b.payment;
   }

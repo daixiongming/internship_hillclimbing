@@ -14,7 +14,11 @@ public:
   void addBid(Bid b);
   void swapBids(int toRemove, Bid toAdd);
 
-  float totalValue();
+  std::vector<Bid> getBids() {
+  	return usedBids;
+  }
+
+  double totalValue();
 
   void clear();
 

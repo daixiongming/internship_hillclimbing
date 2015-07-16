@@ -6,14 +6,15 @@
 class HillClimber {
 public:
   HillClimber();
-  void run();
+  void run(std::string file);
+  void populateBidsFromFile(std::string filename);
+  void writeBidsToFile(std::string filename);
   State bestState;
   State currentState;
 
 private:
-  std::vector<Bid> bids{Bid({1, 5, -1}, 8, 0), Bid({1, 4, -1}, 9, 1),
-                        Bid({2, 3, -2}, 3, 2),
-                        Bid({0, 1, 2, 3, 4, 5, -2}, 13, 3)};
+  std::vector<Bid> bids;
+  double runtime;
   State next;
 };
 
